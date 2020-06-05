@@ -620,6 +620,9 @@
 .items li > a:last-of-type:last-child::before {
   left: 50%; }
 
+.nature-details {
+  padding: 4rem; }
+
 .features {
   height: 35em; }
 
