@@ -1,0 +1,65 @@
+.form {
+    background-color: #fff;
+    position: relative;
+    top: 27%;
+    right: 55%;
+    width: 17rem;
+    left: 62rem;
+    height: 18rem;
+    margin-top: 1rem;
+    z-index: 1;
+
+    @media only screen and (max-width: 900px) {
+        left: 120rem;
+    }
+    @media only screen and (max-width: 600px) {
+        left: 40rem;
+    }
+
+    &_heading {
+        font-size: large;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 1rem;
+    }
+    &_group {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &_input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, 0.5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all 0.3s;
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: 0.7rem;
+        display: block;
+        transition: all 0.3s;
+    }
+
+    &_btn {
+        font-size: 22px;
+        font-weight: 100;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        background-color: yellow;
+        padding: 10px;
+        margin-left: 3rem;
+    }
+}

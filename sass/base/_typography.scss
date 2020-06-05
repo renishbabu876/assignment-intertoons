@@ -1,0 +1,135 @@
+.heading-main {
+    position: relative;
+    font-family: Lato;
+    font-weight: 300;
+    display: inline-block;
+    color: #222;
+    font-size: 40px;
+    margin: 30px;
+
+    padding: 0 10px;
+    text-align: center;
+    top: 50%;
+    left: 20%;
+
+    @media only screen and (max-width: 1200px) {
+        position: relative;
+        left: 34rem;
+        font-size: 61px;
+        margin-left: -29rem;
+        margin-right: -2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        position: relative;
+        left: 54rem;
+        font-size: 61px;
+        margin-left: -50rem;
+        margin-right: -2rem;
+    }
+}
+
+.heading-main:before,
+.heading-main:after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid $color-black;
+    width: 30px;
+    bottom: 23px;
+}
+.heading-main:before {
+    left: -30px;
+}
+.heading-main:after {
+    right: -30px;
+}
+.heading-primary {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.text-line {
+    text-transform: uppercase;
+    position: relative;
+    font-family: Lato;
+    font-weight: 300;
+    display: inline-block;
+    color: #222;
+    font-size: 40px;
+    margin: 30px;
+
+    padding: 0 10px;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+
+    @media only screen and (max-width: 1200px) {
+        width: 200%;
+    }
+    @media only screen and (max-width: 900px) {
+        width: 374%;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        border-bottom: 2px solid $color-black;
+        width: 45%;
+        bottom: 23px;
+    }
+    &:before {
+        left: -30px;
+    }
+    &:after {
+        right: -30px;
+    }
+}
+.text-line-primary {
+    width: 29% !important;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+
+        padding: 12px 16px;
+        z-index: 1;
+
+        span {
+            text-align: center;
+            color: white;
+            vertical-align: ce;
+            vertical-align: center;
+            position: absolute;
+            position: relative;
+            top: 2em;
+            font-size: x-large;
+        }
+
+        &:hover {
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            span {
+                color: black;
+            }
+        }
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.card-heading {
+    text-align: center;
+    padding-top: 3rem;
+}
+.card-paragraph {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}

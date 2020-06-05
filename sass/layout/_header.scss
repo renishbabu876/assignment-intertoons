@@ -1,0 +1,90 @@
+.header {
+  background-image: url(../img/header-img.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position: top;
+  background-size: cover;
+
+  @media only screen and (max-width: 1200px) {
+    width: 203%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 383%;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 400%;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5rem;
+    left: -186px;
+    height: 50%;
+    width: 113%;
+    background: linear-gradient(to bottom, rgba(232, 208, 148, 0.3) 0%, rgba(48, 47, 45, 0.8) 100%);
+
+    @media only screen and (max-width: 1200px) {
+      width: 224%;
+    }
+    @media only screen and (max-width: 900px) {
+      width: 414%;
+    }
+    @media only screen and (max-width: 900px) {
+      width: 469%;
+    }
+  }
+  // &__overlay {
+  //   position: relative;
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   z-index: 2;
+  //   cursor: pointer;
+  //   &::after {
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     bottom: -6rem;
+  //     left: -186px;
+  //     height: 129%;
+  //     width: 133%;
+  //     background: linear-gradient(to bottom, rgba(232, 208, 148, 0.3) 0%, rgba(232, 208, 148, 0.8) 100%);
+  //   }
+  // }
+}
+.nature-logo {
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  position: relative;
+  top: 1rem;
+  left: 11rem;
+  z-index: 1;
+
+  @media only screen and (max-width: 1200px) {
+    top: -2rem;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -6rem;
+  left: -186px;
+  height: 129%;
+  width: 133%;
+  background: linear-gradient(to bottom, rgba(232, 208, 148, 0.3) 0%, rgba(232, 208, 148, 0.8) 100%);
+}
