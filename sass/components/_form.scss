@@ -8,12 +8,21 @@
     height: 18rem;
     margin-top: 1rem;
     z-index: 1;
+    height: auto;
+    padding-bottom: 1em;
 
+    @media only screen and (max-width: 1200px) {
+        position: relative;
+        left: 37rem;
+    }
     @media only screen and (max-width: 900px) {
-        left: 120rem;
+        position: relative;
+        left: 19rem;
     }
     @media only screen and (max-width: 600px) {
-        left: 40rem;
+        position: relative;
+        left: 1rem;
+        top: 1rem;
     }
 
     &_heading {
@@ -40,6 +49,24 @@
         width: 90%;
         display: block;
         transition: all 0.3s;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
     }
 
     &__label {
@@ -61,5 +88,13 @@
         background-color: yellow;
         padding: 10px;
         margin-left: 3rem;
+    }
+}
+
+label {
+    &.error {
+        color: red;
+        // font-size: smaller;
+        // display: list-item;
     }
 }

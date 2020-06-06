@@ -11,10 +11,10 @@
             margin-left: -15rem;
             margin-right: 2rem;
             position: relative;
-            left: 25rem;
+            left: 1rem;
         }
         @media only screen and (max-width: 900px) {
-            margin-left: -15rem;
+            margin-left: -64rem;
             margin-right: 2rem;
             position: relative;
             left: 40rem;
@@ -23,7 +23,7 @@
             margin-left: -48rem;
             margin-right: 2rem;
             position: relative;
-            left: 40rem;
+            left: 17rem;
         }
     }
 
@@ -36,6 +36,11 @@
         cursor: pointer;
         &:not(:last-child) {
             margin-right: 1.5rem;
+
+            @media only screen and (max-width: 600px) {
+                margin-right: -0.5rem;
+                width: 9rem;
+            }
         }
     }
 
@@ -66,4 +71,7 @@
     top: 50%;
     left: 50%;
     transform: translate(430px, -48px);
+}
+.fa-2x {
+    font-size: 1em;
 }

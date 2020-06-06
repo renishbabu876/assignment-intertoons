@@ -1,14 +1,15 @@
 .parallax-background-container {
+    // width: 104%;
     height: 538px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 
     @media only screen and (max-width: 1200px) {
-        width: 210%;
+        // width: 210%;
     }
     @media only screen and (max-width: 600px) {
-        width: 410%;
+        // width: 410%;
     }
 }
 

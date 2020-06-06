@@ -9,8 +9,7 @@
         position: relative;
         margin-left: 1rem;
         margin-top: -2rem;
-        /* margin-right: auto; */
-        left: 15rem;
+        left: 1rem;
     }
 
     @media only screen and (max-width: 900px) {
@@ -18,20 +17,16 @@
         position: relative;
         margin-left: -10rem;
         margin-top: -2rem;
-        /* margin-right: auto; */
-        left: 33rem;
+        left: 7rem;
     }
     @media only screen and (max-width: 600px) {
         padding-top: 20px;
         position: relative;
         margin-left: -23rem;
         margin-top: -2rem;
-        /* margin-right: auto; */
-        left: 29rem;
+        left: 20rem;
     }
 }
-
-/* Make all children "inline" */
 
 .items li {
     float: left;
@@ -40,8 +35,6 @@
     position: relative;
     padding: 20px 5px 0 5px;
 }
-
-/* Add horizontal connector. Note: they are 2 pseudo-elements */
 
 .items li::before,
 .items li::after {
@@ -61,8 +54,6 @@
     right: auto;
 }
 
-/* Remove left and right connector from a single child */
-
 .items li:only-child::after,
 .items li:only-child::before {
     display: none;
@@ -72,27 +63,19 @@
     padding-top: 0;
 }
 
-/* Remove "outer" connector */
-
 .items li:first-child::before,
 .items li:last-child::after {
     border: 0 none;
 }
-
-/* Add back the down connector for last node */
 
 .items li:last-child::before {
     border-right: 1px solid blue;
     border-radius: 0 5px 0 0;
 }
 
-/* Add curve line to the first child's connector */
-
 .items li:first-child::after {
     border-radius: 5px 0 0 0;
 }
-
-/* Add down connector from parent */
 
 .items ul ul::before {
     content: "";
@@ -104,8 +87,6 @@
     left: 50%;
     width: 0;
 }
-
-/* Add cosmetic for each item */
 
 .items li a {
     font-size: 12px;
@@ -122,16 +103,10 @@
     display: block;
 }
 
-/* Experimental for multiple parents */
-
-/* Add margin for the parents */
-
 .items li a + a {
     position: relative;
     margin-bottom: 12px;
 }
-
-/* Implement also for the first parent */
 
 .items li a:first-child {
     position: relative;
@@ -140,16 +115,14 @@
     height: 11rem;
     width: 11rem;
     background-color: gray;
+    @media only screen and (max-width: 600px) {
+        width: 7rem;
+    }
 
     &:hover {
         background-color: $color-white;
     }
 }
-
-/* 
-  - Add "down" connector (vertical line) from each parent 
-  - Currently it will also select the single parent
-  */
 
 .items li > a:not(:only-child)::after {
     content: "";
@@ -161,16 +134,12 @@
     z-index: -1;
 }
 
-/* Starting to fvcked up from here */
-
-/* Making the horizontal connector line after each multiple parent */
-
 .items li > a:not(:only-of-type):not(:last-of-type)::before {
     content: "";
     position: absolute;
     top: 40px;
     left: auto;
-    width: 110%; /* Changed */
+    width: 110%;
     border-top: 1px solid indigo;
 }
 
@@ -179,11 +148,10 @@
     position: absolute;
     top: 40px;
     right: auto;
-    width: 42%; /* Changed */
+    width: 42%;
     border-top: 1px solid indigo;
 }
 
-/* ADDED STYLES */
 .items li > a:first-of-type:first-child::before {
     left: 50%;
 }

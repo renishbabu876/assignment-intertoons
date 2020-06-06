@@ -1,21 +1,16 @@
 .header {
-  background-image: url(../img/header-img.jpg);
+  background-image: url(../img/header2.jpg);
   height: 100vh;
   width: 100%;
   background-position: top;
   background-size: cover;
 
-  @media only screen and (max-width: 1200px) {
-    width: 203%;
-  }
-  @media only screen and (max-width: 900px) {
-    width: 383%;
-    height: 100%;
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: url(../img/header2.jpg);
   }
 
-  @media only screen and (max-width: 600px) {
-    width: 400%;
-  }
   &::after {
     content: "";
     display: block;
@@ -24,17 +19,7 @@
     left: -186px;
     height: 50%;
     width: 113%;
-    background: linear-gradient(to bottom, rgba(232, 208, 148, 0.3) 0%, rgba(48, 47, 45, 0.8) 100%);
-
-    @media only screen and (max-width: 1200px) {
-      width: 224%;
-    }
-    @media only screen and (max-width: 900px) {
-      width: 414%;
-    }
-    @media only screen and (max-width: 900px) {
-      width: 469%;
-    }
+    background: linear-gradient(to bottom, rgba(232, 208, 148, 0.3) 0%, rgba(48, 47, 45, 0.92) 100%);
   }
   // &__overlay {
   //   position: relative;
@@ -65,26 +50,22 @@
   height: 6rem;
   width: 6rem;
   position: relative;
-  top: 1rem;
+  top: 4rem;
   left: 11rem;
   z-index: 1;
-
-  @media only screen and (max-width: 1200px) {
-    top: -2rem;
-  }
 }
 
-.container {
-  position: relative;
-}
+// .container {
+//   position: relative;
+// }
 
-.container::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -6rem;
-  left: -186px;
-  height: 129%;
-  width: 133%;
-  background: linear-gradient(to bottom, rgba(232, 208, 148, 0.3) 0%, rgba(232, 208, 148, 0.8) 100%);
-}
+// .container::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   bottom: -6rem;
+//   left: -186px;
+//   height: 129%;
+//   width: 133%;
+//   background: linear-gradient(to bottom, rgba(232, 208, 148, 0.3) 0%, rgba(232, 208, 148, 0.8) 100%);
+// }
